@@ -2,12 +2,19 @@
     "version": 2,
     "builds": [
       {
-        "src": "manage.py/wsgi.py",
-        "use": "@ardnt/vercel-python-wsgi",
-        "config": { "runtime": "python3.9" }
+        "src": "manage.py",
+        "use": "@vercel/python"
+      },
+      {
+        "src": "restaurant_project/wsgi.py",
+        "use": "@vercel/python-wsgi"
       }
     ],
     "routes": [
-        { "src": "/(.*)", "dest": "manage.py" }
-      ]
+      {
+        "src": "/(.*)",
+        "dest": "restaurant_project/wsgi.py"
+      }
+    ]
   }
+  
