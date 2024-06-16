@@ -1,13 +1,13 @@
 {
-    "builds": [{
-        "src": "restaurant_project/wsgi.py",
+    "version": 2,
+    "builds": [
+      {
+        "src": "manage.py/wsgi.py",
         "use": "@ardnt/vercel-python-wsgi",
-        "config": { "maxLambdaSize": "15mb" }
-    }],
+        "config": { "runtime": "python3.9" }
+      }
+    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "restaurant_project/wsgi.py"
-        }
-    ]
-}
+        { "src": "/(.*)", "dest": "manage.py" }
+      ]
+  }
