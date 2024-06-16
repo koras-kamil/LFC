@@ -77,12 +77,8 @@ WSGI_APPLICATION = 'restaurant_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'YXZqtdtbnlfvKDygorwrBvrNLdXBrdPD',
-        'HOST': 'containers-us-west-92.railway.app',
-        'PORT': '11695',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
     }
 }
 
